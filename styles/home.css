@@ -1,0 +1,80 @@
+/*
+  Home Page CSS
+  Contains styling for the homepage billboard
+  There is a lot of extra hacky stuff here just to add the blur
+*/
+
+/* Display Board */
+.board {
+  height: 320px;
+  overflow: hidden; /* Used to cut off blur */
+  -webkit-box-shadow:0px 5px 14px #191919; /* It's FLOATING */
+  box-shadow:0px 5px 14px #191919; /* It's FLOATING */
+}
+/* Background */
+.board .back {
+  background: url("../img/board.jpg"); /* BREAD! */
+  -webkit-animation: blur 1.5s linear forwards; /* Trigger the animation below */
+  animation: blur 1.5s linear forwards; /* Trigger the animation below */
+  height: 120%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: -10px -10px 0px -10px; /* Larger margins so blur is cut off by parent */
+}
+@-webkit-keyframes blur {
+  to {
+    -webkit-filter: blur(15px);
+    filter: blur(15px);
+  }
+}
+@keyframes blur {
+  to {
+    -webkit-filter: blur(15px);
+    filter: blur(15px);
+  }
+}
+/* All text */
+.board .container {
+  position: absolute; /* Hacky centering */
+  top: 20%; /* Hacky centering */
+  left: 50%; /* Hacky centering */
+  transform: translate(-50%, -50%); /* Hacky centering */
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  text-shadow: 0 1.31px 10px rgba(0,0,0,.4), 0 0 24px rgba(0,0,0,.24); /* Make it readable */
+}
+.board h1 {
+  font-size: 66px;
+  font-weight: 600;
+  text-transform: uppercase; /* Caps Lock: ON! */
+  margin: 0;
+}
+.board h2 {
+  font-size: 37px;
+  font-weight: 400;
+}
+/* Features */
+.feature {
+  padding-top: 5px; /* Personal space */
+  display: flex; /* 2 columns */
+  align-items: center; /* Center icons */
+  width: 600px; /* Since the aside ends but I have OCD so all features have to match */
+}
+.feature .icon {
+  float: left;
+  font-size: 60px !important; /* big boy icon */
+  flex: 0px; /* handled by feature-text (I don't know why, just an hour of trial and error) */
+}
+.feature .feature-text {
+  float: none;
+  flex: 410px; /* Give icon some space (lower = more space) */
+}
+.feature .feature-tagline {
+  font-size: 35px;
+}
+.feature .feature-info {
+  font-size: 15px;
+}
