@@ -1,7 +1,7 @@
 /*
 	Styles for the entire site
 	This should be included first and then any page-specific styles after
-	Page styles can override anything from this fill
+	Page styles can override anything from this file
 */
 
 /* -- GLOBAL STYLING -- */
@@ -11,7 +11,7 @@
 	padding: 0;
 }
 /* Dark theme ftw */
-HTML {
+html {
 	background-color: #282828;
   color: #f2f2f2;
 }
